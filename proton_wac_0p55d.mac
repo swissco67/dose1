@@ -4,6 +4,7 @@
 ##########################
 #define incident particle
 /gps/verbose 0
+/process/em/verbose 0
 /gps/particle proton
 ##########################
 # type and distribution of beam
@@ -13,13 +14,13 @@
 # Set angular distribution
 /gps/ang/type cos
 /gps/ang/mintheta 0.0 deg
-/gps/ang/maxtheta 0.003 deg
+/gps/ang/maxtheta 0.55 deg
 /gps/ang/minphi 0.0 deg
 /gps/ang/maxphi 360.0 deg
 ##########################
 # Setting position
-/gps/pos/centre 138.478500 70.176770 -326.408462 mm
-/gps/pos/radius 0.72 m
+/gps/pos/centre 59.600000 113.046562 116.809700 mm
+/gps/pos/radius 0.31 m
 ##########################
 /gps/ene/type Arb
 /gps/ene/diffspec 1
@@ -42,8 +43,8 @@
 #/gps/hist/point 2         1.65E+13
 #/gps/hist/point 3         7.54E+12
 #/gps/hist/point 5         2.29E+12
-/gps/hist/point 10        2.54E+11
-/gps/hist/point 20        1.81E+10
+#/gps/hist/point 10        2.54E+11
+#/gps/hist/point 20        1.81E+10
 /gps/hist/point 30        3.67E+09
 /gps/hist/point 50        4.92E+08
 /gps/hist/point 100       3.33E+07

@@ -1,11 +1,11 @@
 #include "B1DetectorConstruction.hh"
 #include "B1ActionInitialization.hh"
 
-//#ifdef G4MULTITHREADED
-//#include "G4MTRunManager.hh"
-//#else
+#ifdef G4MULTITHREADED
+#include "G4MTRunManager.hh"
+#else
 #include "G4RunManager.hh"
-//#endif
+#endif
 
 #include "G4UImanager.hh"
 #include "QBBC.hh"
@@ -49,11 +49,12 @@ int main(int argc,char** argv)
   
   // Construct the default run manager
   //
-//#ifdef G4MULTITHREADED
-//  G4MTRunManager* runManager = new G4MTRunManager;
-//#else
+#ifdef G4MULTITHREADED
+  G4MTRunManager* runManager = new G4MTRunManager;
+  runManager->SetNumberOfThreads(4);
+#else
   G4RunManager* runManager = new G4RunManager;
-//#endif
+#endif
 
   // Set mandatory initialization classes
   //
